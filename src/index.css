@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-editorial: "Georgia", 'Cormorant Garamond', serif;
+    --font-display: 'Syne', sans-serif;
+    --font-luxury: 'Cormorant Garamond', "Georgia", serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #f0f9ff;
+    background-image: 
+      radial-gradient(at 10% 20%, rgba(244, 114, 182, 0.18) 0px, transparent 50%),
+      radial-gradient(at 90% 80%, rgba(56, 189, 248, 0.22) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.9) 0px, transparent 100%);
+    color: #0f172a;
+  }
+
+  h1, h2, h3, .font-syne {
+    font-family: var(--font-display);
+  }
+
+  .font-editorial {
+    font-family: var(--font-editorial);
+  }
+
+  .font-cormorant {
+    font-family: var(--font-luxury);
+  }
+
+  .font-mono-code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Editorial Dot Grid Pattern - Luminous Sky Blue & Pink */
+.editorial-dot-grid {
+  background-image: radial-gradient(rgba(56, 189, 248, 0.22) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Editorial Glow & Shadow */
+.editorial-title-shadow {
+  text-shadow: 0 6px 20px rgba(236, 72, 153, 0.25), 0 2px 10px rgba(56, 189, 248, 0.2);
+}
+
+/* Glass UI Core System - Ultra Transparent White, Sky Blue & Baby Pink */
+.glass-surface {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.72) 0%, rgba(255, 240, 248, 0.5) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 20px 45px -12px rgba(56, 189, 248, 0.16),
+    0 8px 24px -6px rgba(236, 72, 153, 0.12),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+.glass-surface-subtle {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(240, 249, 255, 0.45) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 
+    0 10px 25px -8px rgba(56, 189, 248, 0.12),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+.glass-card-interactive {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 240, 248, 0.5) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 16px 36px -10px rgba(56, 189, 248, 0.15),
+    0 6px 18px -4px rgba(236, 72, 153, 0.1),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+.glass-card-interactive:hover {
+  transform: translateY(-4px);
+  border-color: rgba(236, 72, 153, 0.5);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 230, 245, 0.7) 100%);
+  box-shadow: 
+    0 25px 50px -10px rgba(236, 72, 153, 0.25),
+    0 0 30px 2px rgba(56, 189, 248, 0.2),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+.glass-pill {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.75) 0%, rgba(240, 249, 255, 0.6) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.12), inset 0 1px 1px 0 rgba(255, 255, 255, 1);
+}
+
+/* Dreamy glow effects */
+.glow-pink {
+  filter: drop-shadow(0 0 16px rgba(244, 114, 182, 0.45));
+}
+
+.glow-blue {
+  filter: drop-shadow(0 0 16px rgba(56, 189, 248, 0.45));
+}
+
+/* Custom scrollbar matching dreamy light glass */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(240, 249, 255, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(244, 114, 182, 0.6), rgba(56, 189, 248, 0.6));
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(236, 72, 153, 0.8), rgba(2, 132, 199, 0.8));
+}
+
+/* Animated Dreamy Gradient Backgrounds */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.08);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 8s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 10s ease-in-out infinite;
+}
